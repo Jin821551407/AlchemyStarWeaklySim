@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlchemyStarWeaklySim</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <div id="app">
+        <div class="screen">
+            <div class="board">
+                <div class="grid" v-for="(row,rowIndex) in boardArray" :key="rowIndex">
+                    <div class="box" 
+                    :class="[{blue:grid.color==='1'},{red:grid.color==='2'},{yellow:grid.color==='3'},{green:grid.color==='4'},{chooseBorder:grid.chooseBorder}]" 
+                    v-for="(grid,index) in row" 
+                    @click="chooseGrid(grid.row,index)"
+                    :key="index"></div>
+                </div>
+            </div>
+        </div>
+        <div class="sequence">
+            
+        </div>
+    </div>
+</body>
+    <script src="./vue.js"></script>
+    <script src="./index.js"></script>
+</html>

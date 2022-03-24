@@ -1,0 +1,45 @@
+.screen{
+    position: relative;
+}
+
+.board{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 480px;
+    height: 480px;
+}
+
+.grid{
+    display: flex;
+}
+
+.box{
+    box-sizing: border-box;
+    width: 60px;
+    height: 60px;
+    background-color: grey;
+}
+
+.blue{
+    background-color: blue;
+}
+
+.red{
+    background-color: red;
+}
+
+.yellow{
+    background-color: yellow;
+}
+
+.green{
+    background-color: green;
+}
+
+.chooseBorder{
+    border: 3px solid rgba(0, 0, 0, 0.5);
+}
