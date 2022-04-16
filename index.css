@@ -1,45 +1,363 @@
 .screen{
-    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 
+/* .explain{
+    height: 130px;
+} */
+
 .board{
+    position: relative;
+    margin-top: 10px;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; */
+    width: 540px;
+    height: 540px;
+}
+.grid{
+    display: flex;
+}
+
+.box{
+    position: relative;
+    box-sizing: border-box;
+    width: 60px;
+    height: 60px;
+    background-color: grey;
+    border: 1px solid #333333;
+}
+.white{
+    background-color: #ffffff;
+}
+
+.blue11{
+    background: url(./images/blue1.png);
+}
+
+.blue12{
+    background: url(./images/blue1.png);
+    transform: rotate(90deg);
+}
+
+.blue13{
+    background: url(./images/blue1.png);
+    transform: rotate(180deg);
+}
+
+.blue14{
+    background: url(./images/blue1.png);
+    transform: rotate(270deg);
+}
+
+.blue21{
+    background: url(./images/blue2.png);
+}
+
+.blue22{
+    background: url(./images/blue2.png);
+    transform: rotate(90deg);
+}
+
+.blue23{
+    background: url(./images/blue2.png);
+    transform: rotate(180deg);
+}
+
+.blue24{
+    background: url(./images/blue2.png);
+    transform: rotate(270deg);
+}
+
+.blue31{
+    background: url(./images/blue3.png);
+}
+
+.blue32{
+    background: url(./images/blue3.png);
+    transform: rotate(90deg);
+}
+
+.blue33{
+    background: url(./images/blue3.png);
+    transform: rotate(180deg);
+}
+
+.blue34{
+    background: url(./images/blue3.png);
+    transform: rotate(270deg);
+}
+
+.red11{
+    background: url(./images/red1.png);
+}
+
+.red12{
+    background: url(./images/red1.png);
+    transform: rotate(90deg);
+}
+
+.red13{
+    background: url(./images/red1.png);
+    transform: rotate(180deg);
+}
+
+.red14{
+    background: url(./images/red1.png);
+    transform: rotate(270deg);
+}
+
+.red21{
+    background: url(./images/red2.png);
+}
+
+.red22{
+    background: url(./images/red2.png);
+    transform: rotate(90deg);
+}
+
+.red23{
+    background: url(./images/red2.png);
+    transform: rotate(180deg);
+}
+
+.red24{
+    background: url(./images/red2.png);
+    transform: rotate(270deg);
+}
+
+.red31{
+    background: url(./images/red3.png);
+}
+
+.red32{
+    background: url(./images/red3.png);
+    transform: rotate(90deg);
+}
+
+.red33{
+    background: url(./images/red3.png);
+    transform: rotate(180deg);
+}
+
+.red34{
+    background: url(./images/red3.png);
+    transform: rotate(270deg);
+}
+
+.yellow11{
+    background: url(./images/yellow1.png);
+}
+
+.yellow12{
+    background: url(./images/yellow1.png);
+    transform: rotate(90deg);
+}
+
+.yellow13{
+    background: url(./images/yellow1.png);
+    transform: rotate(180deg);
+}
+
+.yellow14{
+    background: url(./images/yellow1.png);
+    transform: rotate(270deg);
+}
+
+.yellow21{
+    background: url(./images/yellow2.png);
+}
+
+.yellow22{
+    background: url(./images/yellow2.png);
+    transform: rotate(90deg);
+}
+
+.yellow23{
+    background: url(./images/yellow2.png);
+    transform: rotate(180deg);
+}
+
+.yellow24{
+    background: url(./images/yellow2.png);
+    transform: rotate(270deg);
+}
+
+.yellow31{
+    background: url(./images/yellow3.png);
+}
+
+.yellow32{
+    background: url(./images/yellow3.png);
+    transform: rotate(90deg);
+}
+
+.yellow33{
+    background: url(./images/yellow3.png);
+    transform: rotate(180deg);
+}
+
+.yellow34{
+    background: url(./images/yellow3.png);
+    transform: rotate(270deg);
+}
+
+.green11{
+    background: url(./images/green1.png);
+}
+
+.green12{
+    background: url(./images/green1.png);
+    transform: rotate(90deg);
+}
+
+.green13{
+    background: url(./images/green1.png);
+    transform: rotate(180deg);
+}
+
+.green14{
+    background: url(./images/green1.png);
+    transform: rotate(270deg);
+}
+.green21{
+    background: url(./images/green2.png);
+}
+
+.green22{
+    background: url(./images/green2.png);
+    transform: rotate(90deg);
+}
+
+.green23{
+    background: url(./images/green2.png);
+    transform: rotate(180deg);
+}
+
+.green24{
+    background: url(./images/green2.png);
+    transform: rotate(270deg);
+}
+
+.green31{
+    background: url(./images/green3.png);
+}
+
+.green32{
+    background: url(./images/green3.png);
+    transform: rotate(90deg);
+}
+
+.green33{
+    background: url(./images/green3.png);
+    transform: rotate(180deg);
+}
+
+.green34{
+    background: url(./images/green3.png);
+    transform: rotate(270deg);
+}
+
+
+.corner{
+    background-color: black;
+}
+
+.chooseBorder{
+    border: 3px solid #333333;
+}
+
+.sequenceNumber-wrap{
+    width: 590px;
+    margin: 20px 0;
+}
+
+.sequenceNumber{
+    display: flex;
+    align-items: center;
+}
+
+.sequenceNumberInput{
+    margin: 0 10px;
+    width: 300px;
+}
+
+.sequenceNumberInput:focus{
+    outline: none;
+}
+
+.submit{
+    border-radius: 2px;
+    padding: 0 8px;
+    border: 1px solid black;
+}
+
+
+.tips{
+    color: red;
+    margin: 0 0 10px 0;
+}
+
+.sequence{
+    display: flex;
+    flex-wrap: wrap;
+    width: 600px;
+}
+
+.addGrid{
+    font-size: 50px;
+    color: white;
+    text-align: center;
+    line-height: 52px;
+}
+
+.person{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
     margin: auto;
-    width: 480px;
-    height: 480px;
+    background-color: brown;
+    z-index: 999;
 }
 
-.grid{
+.monster{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: #ffffff;
+}
+
+.imgWrap{
+    width: 80%;
+    min-height: 240px;
     display: flex;
+    flex-wrap: wrap;
 }
 
-.box{
-    box-sizing: border-box;
-    width: 60px;
-    height: 60px;
-    background-color: grey;
+.pic{
+    margin: 20px 10px;
+    width: 200px;
+    height: 200px;
 }
 
-.blue{
-    background-color: blue;
-}
-
-.red{
-    background-color: red;
-}
-
-.yellow{
-    background-color: yellow;
-}
-
-.green{
-    background-color: green;
-}
-
-.chooseBorder{
-    border: 3px solid rgba(0, 0, 0, 0.5);
+.line{
+    position: absolute;
+    background-color: #fff;
+    z-index: 99;
 }
