@@ -7,7 +7,7 @@
     <title>AlchemyStarWeaklySim</title>
     <link rel="stylesheet" href="./index.css">
 </head>
-<body style="font-size: 0.5rem;">
+<body>
     <div id="app">
         <div class="screen">
             <!-- 使用说明 -->
@@ -109,7 +109,7 @@
                             :class="{chooseBorder:isEdit===3}"
                             v-if="personY===rowIndex&&personX===index"
                             @click.stop="choosePersonFun"
-                            ></div>
+                            >{{personArray.length}}</div>
                             <!-- 怪物 -->
                             <div 
                             class="monster" 
@@ -143,7 +143,6 @@
                     <!-- 保存 -->
                     <div class="save">
                         <button @click="save">保存当前棋盘</button>
-                        <span>当前已走过 {{personArray.length}} 步</span>
                     </div>
                     <!-- 提示语 -->
                     <div class="tips">{{tipsText}}</div>
