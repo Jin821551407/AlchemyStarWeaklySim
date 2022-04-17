@@ -7,7 +7,7 @@
     <title>AlchemyStarWeaklySim</title>
     <link rel="stylesheet" href="./index.css">
 </head>
-<body>
+<body style="font-size: 0.5rem;">
     <div id="app">
         <div class="screen">
             <!-- 使用说明 -->
@@ -36,172 +36,178 @@
                     >
                 </div>
             </div>
-            <!-- 棋盘 -->
-            <div class="board" id="board">
-                <div class="line"
-                    v-for="(line,lineIndex) in lineArr" :key="lineIndex+'line'"
-                 :style="`width:${line.width}px;height:${line.height}px;top:${line.top}px;left:${line.left}px;transform-origin:left;transform:rotate(${line.lineDeg}deg);`"></div>
-                <div class="grid" v-for="(row,rowIndex) in boardArray" :key="rowIndex">
-                    <div class="box" 
-                    :class="[
-                    {white:grid.color==='0'},
-                    {blue11:grid.color==='111'},
-                    {blue12:grid.color==='112'},
-                    {blue13:grid.color==='113'},
-                    {blue14:grid.color==='114'},
-                    {blue21:grid.color==='121'},
-                    {blue22:grid.color==='122'},
-                    {blue23:grid.color==='123'},
-                    {blue24:grid.color==='124'},
-                    {blue31:grid.color==='131'},
-                    {blue32:grid.color==='132'},
-                    {blue33:grid.color==='133'},
-                    {blue34:grid.color==='134'},
-                    {red11:grid.color==='211'},
-                    {red12:grid.color==='212'},
-                    {red13:grid.color==='213'},
-                    {red14:grid.color==='214'},
-                    {red21:grid.color==='221'},
-                    {red22:grid.color==='222'},
-                    {red23:grid.color==='223'},
-                    {red24:grid.color==='224'},
-                    {red31:grid.color==='231'},
-                    {red32:grid.color==='232'},
-                    {red33:grid.color==='233'},
-                    {red34:grid.color==='234'},
-                    {yellow11:grid.color==='311'},
-                    {yellow12:grid.color==='312'},
-                    {yellow13:grid.color==='313'},
-                    {yellow14:grid.color==='314'},
-                    {yellow21:grid.color==='321'},
-                    {yellow22:grid.color==='322'},
-                    {yellow23:grid.color==='323'},
-                    {yellow24:grid.color==='324'},
-                    {yellow31:grid.color==='331'},
-                    {yellow32:grid.color==='332'},
-                    {yellow33:grid.color==='333'},
-                    {yellow34:grid.color==='334'},
-                    {green11:grid.color==='411'},
-                    {green12:grid.color==='412'},
-                    {green13:grid.color==='413'},
-                    {green14:grid.color==='414'},
-                    {green21:grid.color==='421'},
-                    {green22:grid.color==='422'},
-                    {green23:grid.color==='423'},
-                    {green24:grid.color==='424'},
-                    {green31:grid.color==='431'},
-                    {green32:grid.color==='432'},
-                    {green33:grid.color==='433'},
-                    {green34:grid.color==='434'},
-                    {chooseBorder:grid.chooseBorder&&isEdit===1&&!isInput},
-                    {corner:grid.isCorner}
-                    ]" 
-                    v-for="(grid,index) in row" 
-                    @click.left="chooseGrid(grid.row,index)"
-                    @click.right="cancelOperation(grid.row,index)"
-                    @contextmenu.prevent=""
-                    :key="index">
-                        <!-- 人物 -->
-                        <div 
-                        class="person" 
-                        :class="{chooseBorder:isEdit===3}"
-                        v-if="personY===rowIndex&&personX===index"
-                        @click.stop="choosePersonFun"
-                        ></div>
-                        <!-- 怪物 -->
-                        <div 
-                        class="monster" 
-                        v-for="(monster,i) in monsterArray" 
-                        :class="{chooseBorder:isEdit===4&&i===chooseMonster}"
-                        v-if="monster.y===rowIndex&&monster.x===index"
-                        @click.stop="chooseMonsterFun(i)"
-                        :key="i"></div>
+            <!-- 下半部分 -->
+            <div class="bottomWrap">
+                <!-- 左半部分 棋盘 -->
+                <div class="board" id="board">
+                    <div class="line"
+                        v-for="(line,lineIndex) in lineArr" :key="lineIndex+'line'"
+                     :style="`width:${line.width}px;height:${line.height}px;top:${line.top}px;left:${line.left}px;transform-origin:left;transform:rotate(${line.lineDeg}deg);`"></div>
+                    <div class="grid" v-for="(row,rowIndex) in boardArray" :key="rowIndex">
+                        <div class="box" 
+                        :class="[
+                        {white:grid.color==='0'},
+                        {blue11:grid.color==='111'},
+                        {blue12:grid.color==='112'},
+                        {blue13:grid.color==='113'},
+                        {blue14:grid.color==='114'},
+                        {blue21:grid.color==='121'},
+                        {blue22:grid.color==='122'},
+                        {blue23:grid.color==='123'},
+                        {blue24:grid.color==='124'},
+                        {blue31:grid.color==='131'},
+                        {blue32:grid.color==='132'},
+                        {blue33:grid.color==='133'},
+                        {blue34:grid.color==='134'},
+                        {red11:grid.color==='211'},
+                        {red12:grid.color==='212'},
+                        {red13:grid.color==='213'},
+                        {red14:grid.color==='214'},
+                        {red21:grid.color==='221'},
+                        {red22:grid.color==='222'},
+                        {red23:grid.color==='223'},
+                        {red24:grid.color==='224'},
+                        {red31:grid.color==='231'},
+                        {red32:grid.color==='232'},
+                        {red33:grid.color==='233'},
+                        {red34:grid.color==='234'},
+                        {yellow11:grid.color==='311'},
+                        {yellow12:grid.color==='312'},
+                        {yellow13:grid.color==='313'},
+                        {yellow14:grid.color==='314'},
+                        {yellow21:grid.color==='321'},
+                        {yellow22:grid.color==='322'},
+                        {yellow23:grid.color==='323'},
+                        {yellow24:grid.color==='324'},
+                        {yellow31:grid.color==='331'},
+                        {yellow32:grid.color==='332'},
+                        {yellow33:grid.color==='333'},
+                        {yellow34:grid.color==='334'},
+                        {green11:grid.color==='411'},
+                        {green12:grid.color==='412'},
+                        {green13:grid.color==='413'},
+                        {green14:grid.color==='414'},
+                        {green21:grid.color==='421'},
+                        {green22:grid.color==='422'},
+                        {green23:grid.color==='423'},
+                        {green24:grid.color==='424'},
+                        {green31:grid.color==='431'},
+                        {green32:grid.color==='432'},
+                        {green33:grid.color==='433'},
+                        {green34:grid.color==='434'},
+                        {chooseBorder:grid.chooseBorder&&isEdit===1&&!isInput},
+                        {corner:grid.isCorner}
+                        ]" 
+                        v-for="(grid,index) in row" 
+                        @click.left="chooseGrid(grid.row,index)"
+                        @click.right="cancelOperation(grid.row,index)"
+                        @contextmenu.prevent=""
+                        :key="index">
+                            <!-- 人物 -->
+                            <div 
+                            class="person" 
+                            :class="{chooseBorder:isEdit===3}"
+                            v-if="personY===rowIndex&&personX===index"
+                            @click.stop="choosePersonFun"
+                            ></div>
+                            <!-- 怪物 -->
+                            <div 
+                            class="monster" 
+                            v-for="(monster,i) in monsterArray" 
+                            :class="{chooseBorder:isEdit===4&&i===chooseMonster}"
+                            v-if="monster.y===rowIndex&&monster.x===index"
+                            @click.stop="chooseMonsterFun(i)"
+                            :key="i"></div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <!-- 序列号输入框 -->
-            <div class="sequenceNumber-wrap">
-                <div class="sequenceNumber">
-                    输入序列编号以替换现有序列:
-                    <input 
-                    v-model="sequenceNumber"
-                    type="text" 
-                    class="sequenceNumberInput" 
-                    @focus="focus"
-                    @blur="blur"
-                    @input="addSequenceColor">
-                    <!-- <span 
-                    class="submit"
-                    @click="addSequenceColor">
-                        确定
-                    </span> -->
+                <!-- 右半部分 序列 -->
+                <div>
+                    <!-- 序列号输入框 -->
+                    <div class="sequenceNumber-wrap">
+                        <div class="sequenceNumber">
+                            输入序列编号以替换现有序列:
+                            <textarea 
+                            v-model="sequenceNumber"
+                            class="sequenceNumberInput" 
+                            @focus="isInput=true"
+                            @blur="isInput=false"
+                            @input="addSequenceColor"></textarea>
+                            <!-- <span 
+                            class="submit"
+                            @click="addSequenceColor">
+                                确定
+                            </span> -->
+                        </div>
+                    </div>
+                    <!-- 保存 -->
+                    <div class="save">
+                        <button @click="save">保存当前棋盘</button>
+                        <span>当前已走过 {{personArray.length}} 步</span>
+                    </div>
+                    <!-- 提示语 -->
+                    <div class="tips">{{tipsText}}</div>
+                    <!-- 序列颜色 -->
+                    <div class="sequence">
+                        <!-- <div class="addGrid box" @click="removeSequence">-</div> -->
+                        <!-- <div class="addGrid box" @click="addSequence">+</div> -->
+                        <div class="seqBox" 
+                        :class="[
+                        {white:sequence.color==='0'},
+                        {blue11:sequence.color==='111'},
+                        {blue12:sequence.color==='112'},
+                        {blue13:sequence.color==='113'},
+                        {blue14:sequence.color==='114'},
+                        {blue21:sequence.color==='121'},
+                        {blue22:sequence.color==='122'},
+                        {blue23:sequence.color==='123'},
+                        {blue24:sequence.color==='124'},
+                        {blue31:sequence.color==='131'},
+                        {blue32:sequence.color==='132'},
+                        {blue33:sequence.color==='133'},
+                        {blue34:sequence.color==='134'},
+                        {red11:sequence.color==='211'},
+                        {red12:sequence.color==='212'},
+                        {red13:sequence.color==='213'},
+                        {red14:sequence.color==='214'},
+                        {red21:sequence.color==='221'},
+                        {red22:sequence.color==='222'},
+                        {red23:sequence.color==='223'},
+                        {red24:sequence.color==='224'},
+                        {red31:sequence.color==='231'},
+                        {red32:sequence.color==='232'},
+                        {red33:sequence.color==='233'},
+                        {red34:sequence.color==='234'},
+                        {yellow11:sequence.color==='311'},
+                        {yellow12:sequence.color==='312'},
+                        {yellow13:sequence.color==='313'},
+                        {yellow14:sequence.color==='314'},
+                        {yellow21:sequence.color==='321'},
+                        {yellow22:sequence.color==='322'},
+                        {yellow23:sequence.color==='323'},
+                        {yellow24:sequence.color==='324'},
+                        {yellow31:sequence.color==='331'},
+                        {yellow32:sequence.color==='332'},
+                        {yellow33:sequence.color==='333'},
+                        {yellow34:sequence.color==='334'},
+                        {green11:sequence.color==='411'},
+                        {green12:sequence.color==='412'},
+                        {green13:sequence.color==='413'},
+                        {green14:sequence.color==='414'},
+                        {green21:sequence.color==='421'},
+                        {green22:sequence.color==='422'},
+                        {green23:sequence.color==='423'},
+                        {green24:sequence.color==='424'},
+                        {green31:sequence.color==='431'},
+                        {green32:sequence.color==='432'},
+                        {green33:sequence.color==='433'},
+                        {green34:sequence.color==='434'},
+                        {chooseBorder:sequence.chooseBorder&&isEdit===2&&!isInput}]"
+                        v-for="(sequence,sequenceIndex) in sequenceArray" 
+                        @click="chooseSequence(sequenceIndex)"
+                        :key="sequenceIndex"></div>
+                    </div>
                 </div>
-            </div>
-            <!-- 保存 -->
-            <div class="save">
-                <button @click="save">保存当前棋盘</button>
-            </div>
-            <!-- 提示语 -->
-            <div class="tips">{{tipsText}}</div>
-            <!-- 序列颜色 -->
-            <div class="sequence">
-                <!-- <div class="addGrid box" @click="removeSequence">-</div> -->
-                <!-- <div class="addGrid box" @click="addSequence">+</div> -->
-                <div class="box" 
-                :class="[
-                {white:sequence.color==='0'},
-                {blue11:sequence.color==='111'},
-                {blue12:sequence.color==='112'},
-                {blue13:sequence.color==='113'},
-                {blue14:sequence.color==='114'},
-                {blue21:sequence.color==='121'},
-                {blue22:sequence.color==='122'},
-                {blue23:sequence.color==='123'},
-                {blue24:sequence.color==='124'},
-                {blue31:sequence.color==='131'},
-                {blue32:sequence.color==='132'},
-                {blue33:sequence.color==='133'},
-                {blue34:sequence.color==='134'},
-                {red11:sequence.color==='211'},
-                {red12:sequence.color==='212'},
-                {red13:sequence.color==='213'},
-                {red14:sequence.color==='214'},
-                {red21:sequence.color==='221'},
-                {red22:sequence.color==='222'},
-                {red23:sequence.color==='223'},
-                {red24:sequence.color==='224'},
-                {red31:sequence.color==='231'},
-                {red32:sequence.color==='232'},
-                {red33:sequence.color==='233'},
-                {red34:sequence.color==='234'},
-                {yellow11:sequence.color==='311'},
-                {yellow12:sequence.color==='312'},
-                {yellow13:sequence.color==='313'},
-                {yellow14:sequence.color==='314'},
-                {yellow21:sequence.color==='321'},
-                {yellow22:sequence.color==='322'},
-                {yellow23:sequence.color==='323'},
-                {yellow24:sequence.color==='324'},
-                {yellow31:sequence.color==='331'},
-                {yellow32:sequence.color==='332'},
-                {yellow33:sequence.color==='333'},
-                {yellow34:sequence.color==='334'},
-                {green11:sequence.color==='411'},
-                {green12:sequence.color==='412'},
-                {green13:sequence.color==='413'},
-                {green14:sequence.color==='414'},
-                {green21:sequence.color==='421'},
-                {green22:sequence.color==='422'},
-                {green23:sequence.color==='423'},
-                {green24:sequence.color==='424'},
-                {green31:sequence.color==='431'},
-                {green32:sequence.color==='432'},
-                {green33:sequence.color==='433'},
-                {green34:sequence.color==='434'},
-                {chooseBorder:sequence.chooseBorder&&isEdit===2&&!isInput}]"
-                v-for="(sequence,sequenceIndex) in sequenceArray" 
-                @click="chooseSequence(sequenceIndex)"
-                :key="sequenceIndex"></div>
             </div>
         </div>
     </div>

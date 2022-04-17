@@ -1,3 +1,7 @@
+html {
+    font-size: 2.36686931vw;
+}
+
 .screen{
     display: flex;
     flex-direction: column;
@@ -6,20 +10,15 @@
     overflow: hidden;
 }
 
-/* .explain{
-    height: 130px;
-} */
-
 .board{
     position: relative;
-    margin-top: 10px;
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; */
-    width: 540px;
-    height: 540px;
+    margin-top: 0.25rem;
+    margin-right: 2rem;
+    margin-left: 3rem;
+    width: 13.5rem;
+    height: 13.5rem;
 }
+
 .grid{
     display: flex;
 }
@@ -27,11 +26,21 @@
 .box{
     position: relative;
     box-sizing: border-box;
-    width: 60px;
-    height: 60px;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: grey;
+    border: 0.025rem solid #333333;
+}
+
+.seqBox{
+    position: relative;
+    box-sizing: border-box;
+    width: 1.25rem;
+    height: 1.25rem;
     background-color: grey;
     border: 1px solid #333333;
 }
+
 .white{
     background-color: #ffffff;
 }
@@ -269,22 +278,27 @@
 }
 
 .chooseBorder{
-    border: 3px solid #333333;
+    border: 0.075rem solid #333333;
 }
 
 .sequenceNumber-wrap{
-    width: 590px;
-    margin: 20px 0;
+    width: 14.75rem;
+    margin: 0.5rem 0;
 }
 
 .sequenceNumber{
     display: flex;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .sequenceNumberInput{
-    margin: 0 10px;
-    width: 300px;
+    box-sizing: border-box;
+    margin: 0 0.25rem;
+    width: 6.05rem;
+    padding: 0.3rem;
+    font-size: 0.7rem;
+    overflow: hidden;
+    resize: vertical;
 }
 
 .sequenceNumberInput:focus{
@@ -292,33 +306,33 @@
 }
 
 .submit{
-    border-radius: 2px;
-    padding: 0 8px;
+    border-radius: 0.05rem;
+    padding: 0 0.2rem;
     border: 1px solid black;
 }
 
 
 .tips{
     color: red;
-    margin: 0 0 10px 0;
+    margin: 0 0 0.25rem 0;
 }
 
 .sequence{
     display: flex;
     flex-wrap: wrap;
-    width: 600px;
+    width: 18.75rem;
 }
 
 .addGrid{
-    font-size: 50px;
+    font-size: 1.25rem;
     color: white;
     text-align: center;
-    line-height: 52px;
+    line-height: 1.3rem;
 }
 
 .person{
-    width: 25px;
-    height: 25px;
+    width: 0.625rem;
+    height: 0.625rem;
     border-radius: 50%;
     position: absolute;
     top: 0;
@@ -331,8 +345,8 @@
 }
 
 .monster{
-    width: 25px;
-    height: 25px;
+    width: 0.625rem;
+    height: 0.625rem;
     border-radius: 50%;
     position: absolute;
     top: 0;
@@ -345,19 +359,25 @@
 
 .imgWrap{
     width: 80%;
-    min-height: 240px;
+    min-height: 6rem;
     display: flex;
     flex-wrap: wrap;
 }
 
 .pic{
-    margin: 20px 10px;
-    width: 200px;
-    height: 200px;
+    margin: 0.5rem 0.25rem;
+    width: 5rem;
+    height: 5rem;
 }
 
 .line{
     position: absolute;
     background-color: #fff;
     z-index: 99;
+}
+
+.bottomWrap{
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }

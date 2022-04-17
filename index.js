@@ -124,9 +124,6 @@ new Vue({
         chooseGrid(row,col){
             //非编辑模式下点几格子是移动人物
             if(this.isEdit === 0 && this.sequenceArray.length>0 && !this.boardArray[row][col].isCorner){
-                if(this.personY === row && this.personX === col){
-                    return
-                }
                 /*
                 创建连线
                 */
@@ -531,17 +528,8 @@ new Vue({
                 this.tipsText='请输入正确的序列号（由数字01234组成）'
             }
         },
-        //获得焦点
-        focus(){
-            this.isInput=true
-        },
-        //失去焦点
-        blur(){
-            this.isInput=false
-        },
         save(){
             html2canvas(document.getElementById('board'),{
-
                 // width:'100',
                 // height:'100',
                 // useCORS:true,
@@ -563,7 +551,9 @@ new Vue({
                     //当前的人物位置
                     personY:this.personY,
                     //人物走过的路径
-                    personArray:JSON.parse(JSON.stringify(this.personArray))
+                    personArray:JSON.parse(JSON.stringify(this.personArray)),
+                    //当前剩余序列
+                    sequenceArray:JSON.parse(JSON.stringify(this.sequenceArray))
                 }
                 this.picArr.push(obj)
                 //清空当前画布连线
@@ -589,6 +579,8 @@ new Vue({
                 this.personY = this.picArr[picIndex].personY
                 //恢复人物走过的路线
                 this.personArray = JSON.parse(JSON.stringify(this.picArr[picIndex].personArray))
+                //恢复剩余序列
+                this.sequenceArray = JSON.parse(JSON.stringify(this.picArr[picIndex].sequenceArray))
             }
         },
         //右键删除截图
