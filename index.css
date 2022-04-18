@@ -388,3 +388,25 @@
     justify-content: center;
     flex-wrap: wrap;
 }
+
+.savebtn{
+    margin-right: 10px;
+}
+/*
+人物抗旋转
+*/
+.rotate1{
+    transform: rotate(0deg);
+}
+
+.rotate2{
+    transform: rotate(-90deg);
+}
+
+.rotate3{
+    transform: rotate(-180deg);
+}
+
+.rotate4{
+    transform: rotate(-270deg);
+}

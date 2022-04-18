@@ -305,11 +305,26 @@ new Vue({
         },
         //修改格子颜色 移动人物或者怪物 todo
         async bindKeyboardEvent(){
+            document.oncontextmenu=function(){
+                return false
+            }
+            document.onselectstart=function(){
+                return false
+            }
             document.onkeydown=(event)=>{
+                console.log(event.key)
                 if(this.isEdit === 1&&!this.isInput){
                     if(event.key === 'Shift'){
                         this.isShift = true
                     }
+                } else if (event.key === 'F12') {
+                    return false
+                } else if ((event.key === 'i') || (event.key === 'I')) {
+                    return false
+                } else if ((event.key === 'u') || (event.key === 'U')){
+                    return false
+                } else if ((event.key === 's') || (event.key === 'S')){
+                    return false
                 }
             }
             document.onkeyup=(event)=>{
@@ -553,7 +568,9 @@ new Vue({
                     //人物走过的路径
                     personArray:JSON.parse(JSON.stringify(this.personArray)),
                     //当前剩余序列
-                    sequenceArray:JSON.parse(JSON.stringify(this.sequenceArray))
+                    sequenceArray:JSON.parse(JSON.stringify(this.sequenceArray)),
+                    //当前剩余序列号
+                    sequenceNumber: this.sequenceNumber
                 }
                 this.picArr.push(obj)
                 //清空当前画布连线
@@ -563,6 +580,14 @@ new Vue({
                 //本地存储记录
                 localStorage.setItem('myBorad',JSON.stringify(this.picArr))
             })
+        },
+        clear(){
+            if(confirm('确定清除棋盘缓存？')){
+                //清除页面棋盘
+                this.picArr = []
+                //清除本地存储记录
+                localStorage.setItem('myBorad',JSON.stringify([]))
+            }
         },
         //点击缩略图还原棋盘
         restoreBoard(picIndex){
@@ -581,6 +606,8 @@ new Vue({
                 this.personArray = JSON.parse(JSON.stringify(this.picArr[picIndex].personArray))
                 //恢复剩余序列
                 this.sequenceArray = JSON.parse(JSON.stringify(this.picArr[picIndex].sequenceArray))
+                //恢复剩余序列号
+                this.sequenceNumber = this.picArr[picIndex].sequenceNumber
             }
         },
         //右键删除截图
