@@ -80,7 +80,6 @@ new Vue({
     methods:{
         //初始化
         async init(){
-            console.log('')
             //加载时创建棋盘格子
             await this.createGrids()
             //全局绑定键盘事件
@@ -312,13 +311,12 @@ new Vue({
                 return false
             }
             document.onkeydown=(event)=>{
-                console.log(event.key)
                 if(this.isEdit === 1&&!this.isInput){
                     if(event.key === 'Shift'){
                         this.isShift = true
                     }
-                } else if (event.key === 'F12') {
-                    return false
+                // } else if (event.key === 'F12') {
+                //     return false
                 } else if ((event.key === 'i') || (event.key === 'I')) {
                     return false
                 } else if ((event.key === 'u') || (event.key === 'U')){
@@ -402,7 +400,15 @@ new Vue({
                         this.boardArray.forEach( (el,i) => {
                             el.forEach((e,j) => {
                                 if(e.chooseBorder){
-                                   this.monsterArray.push({x:j,y:i})
+                                    //不能添加到已有怪物格子
+                                    let res = this.monsterArray.find(mon=>{
+                                        return mon.x === j && mon.y === i
+                                    })
+                                    //不能添加到已有人物格子
+                                    if((i!==this.personY || j!==this.personX) && !res){
+                                        console.log(1111)
+                                       this.monsterArray.push({x:j,y:i})
+                                    }
                                 }
                             })
                         })
