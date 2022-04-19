@@ -451,3 +451,8 @@
 .savebtn{
     margin-right: 10px;
 }
+
+.preload{
+    width: 0;
+    height: 0;
+}
