@@ -315,8 +315,8 @@ new Vue({
                     if(event.key === 'Shift'){
                         this.isShift = true
                     }
-                } else if (event.key === 'F12') {
-                    return false
+                // } else if (event.key === 'F12') {
+                //     return false
                 } else if ((event.key === 'i') || (event.key === 'I')) {
                     return false
                 } else if ((event.key === 'u') || (event.key === 'U')){

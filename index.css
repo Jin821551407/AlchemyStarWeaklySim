@@ -49,232 +49,291 @@
 }
 
 .blue11{
-    background: url(./images/blue1.png);
+    background: url(./images/zsprites.png) ;
+    background-position: top 0 left 0;
+    background-repeat: no-repeat;
 }
 
 .blue12{
-    background: url(./images/blue1.png);
-    transform: rotate(90deg);
+    background: url(./images/zsprites.png) ;
+    background-position: top -60 left 0;
+    background-repeat: no-repeat;
 }
 
 .blue13{
-    background: url(./images/blue1.png);
-    transform: rotate(180deg);
+    background: url(./images/zsprites.png) ;
+    background-position: top -120px left 0;
+    background-repeat: no-repeat;
 }
 
 .blue14{
-    background: url(./images/blue1.png);
-    transform: rotate(270deg);
+    background: url(./images/zsprites.png) ;
+    background-position: top -180px left 0;
+    background-repeat: no-repeat;
 }
 
 .blue21{
-    background: url(./images/blue2.png);
+    background: url(./images/zsprites.png) ;
+    background-position: top -240px left 0;
+    background-repeat: no-repeat;
 }
 
 .blue22{
-    background: url(./images/blue2.png);
-    transform: rotate(90deg);
+    background: url(./images/zsprites.png) ;
+    background-position: top -300px left 0;
+    background-repeat: no-repeat;
 }
 
 .blue23{
-    background: url(./images/blue2.png);
-    transform: rotate(180deg);
+    background: url(./images/zsprites.png) ;
+    background-position: top -360px left 0;
+    background-repeat: no-repeat;
 }
 
 .blue24{
-    background: url(./images/blue2.png);
-    transform: rotate(270deg);
+    background: url(./images/zsprites.png) ;
+    background-position: top -420 left 0;
+    background-repeat: no-repeat;
 }
 
 .blue31{
-    background: url(./images/blue3.png);
+    background: url(./images/zsprites.png) ;
+    background-position: top -480px left 0;
+    background-repeat: no-repeat;
 }
 
 .blue32{
-    background: url(./images/blue3.png);
-    transform: rotate(90deg);
+    background: url(./images/zsprites.png) ;
+    background-position: top -540px left 0;
+    background-repeat: no-repeat;
 }
 
 .blue33{
-    background: url(./images/blue3.png);
-    transform: rotate(180deg);
+    background: url(./images/zsprites.png) ;
+    background-position: top -600px left 0;
+    background-repeat: no-repeat;
 }
 
 .blue34{
-    background: url(./images/blue3.png);
-    transform: rotate(270deg);
-}
-
-.red11{
-    background: url(./images/red1.png);
-}
-
-.red12{
-    background: url(./images/red1.png);
-    transform: rotate(90deg);
-}
-
-.red13{
-    background: url(./images/red1.png);
-    transform: rotate(180deg);
-}
-
-.red14{
-    background: url(./images/red1.png);
-    transform: rotate(270deg);
-}
-
-.red21{
-    background: url(./images/red2.png);
-}
-
-.red22{
-    background: url(./images/red2.png);
-    transform: rotate(90deg);
-}
-
-.red23{
-    background: url(./images/red2.png);
-    transform: rotate(180deg);
-}
-
-.red24{
-    background: url(./images/red2.png);
-    transform: rotate(270deg);
-}
-
-.red31{
-    background: url(./images/red3.png);
-}
-
-.red32{
-    background: url(./images/red3.png);
-    transform: rotate(90deg);
-}
-
-.red33{
-    background: url(./images/red3.png);
-    transform: rotate(180deg);
-}
-
-.red34{
-    background: url(./images/red3.png);
-    transform: rotate(270deg);
-}
-
-.yellow11{
-    background: url(./images/yellow1.png);
-}
-
-.yellow12{
-    background: url(./images/yellow1.png);
-    transform: rotate(90deg);
-}
-
-.yellow13{
-    background: url(./images/yellow1.png);
-    transform: rotate(180deg);
-}
-
-.yellow14{
-    background: url(./images/yellow1.png);
-    transform: rotate(270deg);
-}
-
-.yellow21{
-    background: url(./images/yellow2.png);
-}
-
-.yellow22{
-    background: url(./images/yellow2.png);
-    transform: rotate(90deg);
-}
-
-.yellow23{
-    background: url(./images/yellow2.png);
-    transform: rotate(180deg);
-}
-
-.yellow24{
-    background: url(./images/yellow2.png);
-    transform: rotate(270deg);
-}
-
-.yellow31{
-    background: url(./images/yellow3.png);
-}
-
-.yellow32{
-    background: url(./images/yellow3.png);
-    transform: rotate(90deg);
-}
-
-.yellow33{
-    background: url(./images/yellow3.png);
-    transform: rotate(180deg);
-}
-
-.yellow34{
-    background: url(./images/yellow3.png);
-    transform: rotate(270deg);
+    background: url(./images/zsprites.png) ;
+    background-position: top -660px left 0;
+    background-repeat: no-repeat;
 }
 
 .green11{
-    background: url(./images/green1.png);
+    background: url(./images/zsprites.png) ;
+    background-position: top -720px left 0;
+    background-repeat: no-repeat;
 }
 
 .green12{
-    background: url(./images/green1.png);
-    transform: rotate(90deg);
+    background: url(./images/zsprites.png) ;
+    background-position: top -780px left 0;
+    background-repeat: no-repeat;
 }
 
 .green13{
-    background: url(./images/green1.png);
-    transform: rotate(180deg);
+    background: url(./images/zsprites.png) ;
+    background-position: top -840px left 0;
+    background-repeat: no-repeat;
 }
 
 .green14{
-    background: url(./images/green1.png);
-    transform: rotate(270deg);
+    background: url(./images/zsprites.png) ;
+    background-position: top -900px left 0;
+    background-repeat: no-repeat;
 }
 .green21{
-    background: url(./images/green2.png);
+    background: url(./images/zsprites.png) ;
+    background-position: top -960px left 0;
+    background-repeat: no-repeat;
 }
 
 .green22{
-    background: url(./images/green2.png);
-    transform: rotate(90deg);
+    background: url(./images/zsprites.png) ;
+    background-position: top -1020px left 0;
+    background-repeat: no-repeat;
 }
 
 .green23{
-    background: url(./images/green2.png);
-    transform: rotate(180deg);
+    background: url(./images/zsprites.png) ;
+    background-position: top -1080px left 0;
+    background-repeat: no-repeat;
 }
 
 .green24{
-    background: url(./images/green2.png);
-    transform: rotate(270deg);
+    background: url(./images/zsprites.png) ;
+    background-position: top -1140px left 0;
+    background-repeat: no-repeat;
 }
 
 .green31{
-    background: url(./images/green3.png);
+    background: url(./images/zsprites.png) ;
+    background-position: top -1200px left 0;
+    background-repeat: no-repeat;
 }
 
 .green32{
-    background: url(./images/green3.png);
-    transform: rotate(90deg);
+    background: url(./images/zsprites.png) ;
+    background-position: top -1260px left 0;
+    background-repeat: no-repeat;
 }
 
 .green33{
-    background: url(./images/green3.png);
-    transform: rotate(180deg);
+    background: url(./images/zsprites.png) ;
+    background-position: top -1320px left 0;
+    background-repeat: no-repeat;
 }
 
 .green34{
-    background: url(./images/green3.png);
-    transform: rotate(270deg);
+    background: url(./images/zsprites.png) ;
+    background-position: top -1380px left 0;
+    background-repeat: no-repeat;
 }
 
+.red11{
+    background: url(./images/zsprites.png) ;
+    background-position: top -1440px left 0;
+    background-repeat: no-repeat;
+}
+
+.red12{
+    background: url(./images/zsprites.png) ;
+    background-position: top -1500px left 0;
+    background-repeat: no-repeat;
+}
+
+.red13{
+    background: url(./images/zsprites.png) ;
+    background-position: top -1560px left 0;
+    background-repeat: no-repeat;
+}
+
+.red14{
+    background: url(./images/zsprites.png) ;
+    background-position: top -1620px left 0;
+    background-repeat: no-repeat;
+}
+
+.red21{
+    background: url(./images/zsprites.png) ;
+    background-position: top -1680px left 0;
+    background-repeat: no-repeat;
+}
+
+.red22{
+    background: url(./images/zsprites.png) ;
+    background-position: top -1740px left 0;
+    background-repeat: no-repeat;
+}
+
+.red23{
+    background: url(./images/zsprites.png) ;
+    background-position: top -1800px left 0;
+    background-repeat: no-repeat;
+}
+
+.red24{
+    background: url(./images/zsprites.png) ;
+    background-position: top -1860px left 0;
+    background-repeat: no-repeat;
+}
+
+.red31{
+    background: url(./images/zsprites.png) ;
+    background-position: top -1920px left 0;
+    background-repeat: no-repeat;
+}
+
+.red32{
+    background: url(./images/zsprites.png) ;
+    background-position: top -1980px left 0;
+    background-repeat: no-repeat;
+}
+
+.red33{
+    background: url(./images/zsprites.png) ;
+    background-position: top -2040px left 0;
+    background-repeat: no-repeat;
+}
+
+.red34{
+    background: url(./images/zsprites.png) ;
+    background-position: top -2100px left 0;
+    background-repeat: no-repeat;
+}
+
+.yellow11{
+    background: url(./images/zsprites.png) ;
+    background-position: top -2160px left 0;
+    background-repeat: no-repeat;
+}
+
+.yellow12{
+    background: url(./images/zsprites.png) ;
+    background-position: top -2220px left 0;
+    background-repeat: no-repeat;
+}
+
+.yellow13{
+    background: url(./images/zsprites.png) ;
+    background-position: top -2280px left 0;
+    background-repeat: no-repeat;
+}
+
+.yellow14{
+    background: url(./images/zsprites.png) ;
+    background-position: top -2340px left 0;
+    background-repeat: no-repeat;
+}
+
+.yellow21{
+    background: url(./images/zsprites.png) ;
+    background-position: top -2400px left 0;
+    background-repeat: no-repeat;
+}
+
+.yellow22{
+    background: url(./images/zsprites.png) ;
+    background-position: top -2460px left 0;
+    background-repeat: no-repeat;
+}
+
+.yellow23{
+    background: url(./images/zsprites.png) ;
+    background-position: top -2520px left 0;
+    background-repeat: no-repeat;
+}
+
+.yellow24{
+    background: url(./images/zsprites.png) ;
+    background-position: top -2580px left 0;
+    background-repeat: no-repeat;
+}
+
+.yellow31{
+    background: url(./images/zsprites.png) ;
+    background-position: top -2640px left 0;
+    background-repeat: no-repeat;
+}
+
+.yellow32{
+    background: url(./images/zsprites.png) ;
+    background-position: top -2700px left 0;
+    background-repeat: no-repeat;
+}
+
+.yellow33{
+    background: url(./images/zsprites.png) ;
+    background-position: top -2760px left 0;
+    background-repeat: no-repeat;
+}
+
+.yellow34{
+    background: url(./images/zsprites.png) ;
+    background-position: top -2820px left 0;
+    background-repeat: no-repeat;
+}
 
 .corner{
     background-color: black;
@@ -391,22 +450,4 @@
 
 .savebtn{
     margin-right: 10px;
-}
-/*
-人物抗旋转
-*/
-.rotate1{
-    transform: rotate(0deg);
-}
-
-.rotate2{
-    transform: rotate(-90deg);
-}
-
-.rotate3{
-    transform: rotate(-180deg);
-}
-
-.rotate4{
-    transform: rotate(-270deg);
 }
